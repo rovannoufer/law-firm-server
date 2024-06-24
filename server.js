@@ -9,7 +9,7 @@ const port = 5000;
 app.use(cors());
 app.use(express.json());
 
-const uri = "mongodb+srv://noufermohamed007:7L8Curlz2Y79LTja@law.utbohpo.mongodb.net/?retryWrites=true&w=majority&appName=law";
+const uri = process.env.DB_LOCATION;
 
 mongoose.connect(uri)
   .then(() => console.log('MongoDB connected'))
